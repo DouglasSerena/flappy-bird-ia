@@ -1,0 +1,28 @@
+{
+    "scripts": {
+        "build": "parcel build src/index.html",
+        "copy:assets": "cp -r assets dist",
+        "clean:dist": "rm -rf dist && mkdir dist",
+        "start:dev": "yarn run clean:dist && yarn run copy:assets && parcel src/index.html --public-url /"
+    },
+    "devDependencies": {
+        "@parcel/transformer-typescript-tsc": "^2.7.0",
+        "@types/lodash": "^4.14.185",
+        "@types/node": "^18.7.18",
+        "@types/synaptic": "^1.0.4",
+        "buffer": "^6.0.3",
+        "crypto-browserify": "^3.12.0",
+        "events": "^3.3.0",
+        "parcel": "^2.7.0",
+        "parcel-reporter-static-files-copy": "^1.4.0",
+        "process": "^0.11.10",
+        "stream-browserify": "^3.0.0",
+        "type-fest": "^2.19.0",
+        "typescript": "^4.8.3",
+        "vm-browserify": "^1.1.2"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21",
+        "synaptic": "^1.1.4"
+    }
+}
