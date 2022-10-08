@@ -1,9 +1,9 @@
 import GameObject from "../game-object";
 import { GameStatus } from "../../game";
-import { PipesObstacle } from "./pipes.obstacle";
+import PipesObstacle from "./pipes.obstacle";
 import Vector2 from "../../shared/vector2";
 
-export class PipesSliderObstacle extends GameObject {
+export default class PipesSliderObstacle extends GameObject {
     public readonly name: string = "pipes-slider-obstacle";
 
     public zIndex: number = 1;

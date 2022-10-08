@@ -2,9 +2,9 @@ import { GameStatus } from "../../game";
 import ParallaxHorizontal from "../../modules/parallax-horizontal";
 import vector2 from "../../shared/vector2";
 import GameObject from "../game-object";
-import { GroundObstacle } from "../obstacles/ground.obstacle";
+import GroundObstacle  from "../obstacles/ground.obstacle";
 
-export class BackgroundLayer extends GameObject {
+export default class BackgroundLayer extends GameObject {
     public name: string = "background-layer";
 
     public get ground(): GroundObstacle {

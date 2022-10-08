@@ -1,9 +1,9 @@
 import { ICollision } from "../../modules/collision/collision";
 import Vector2 from "../../shared/vector2";
 import GameObject from "../game-object";
-import { PipeObstacle } from "./pipe.obstacle";
+import PipeObstacle from "./pipe.obstacle";
 
-export class PipesObstacle extends GameObject {
+export default class PipesObstacle extends GameObject {
     public readonly name: string = "pipes-obstacle";
 
     public gap: number = 100;

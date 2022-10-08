@@ -3,7 +3,7 @@ import Emitter from "./event-emitter/emitter";
 import Renderer from "./renderer";
 import Runner from "./runner";
 import GameObject from "./game-objects/game-object";
-import { Bird, BirdStatus } from "./game-objects/bird";
+import  Bird, { BirdStatus } from "./game-objects/bird";
 import { BirdEvents } from "./event-emitter/main/bird.event";
 import { debounce } from "lodash";
 
@@ -15,7 +15,7 @@ export enum GameStatus {
     Paused,
 }
 
-export class Game {
+export default class Game {
     public status: GameStatus = GameStatus.GetReady;
 
     public runner: Runner = new Runner();

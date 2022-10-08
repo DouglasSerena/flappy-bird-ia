@@ -1,4 +1,4 @@
-import { Game } from "../game";
+import Game from "../game";
 import Vector2 from "../shared/vector2";
 
 export default abstract class GameObject {

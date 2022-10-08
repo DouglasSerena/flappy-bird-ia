@@ -2,7 +2,7 @@ import CollisionRect from "../../modules/collision/collision-rect";
 import Sprite from "../../modules/sprite";
 import GameObject from "../game-object";
 
-export class PipeObstacle extends GameObject {
+export default class PipeObstacle extends GameObject {
     public readonly name: string = "pipe-obstacle";
 
     public zIndex: number = 1;

@@ -3,7 +3,7 @@ import CollisionRect from "../../modules/collision/collision-rect";
 import ParallaxHorizontal from "../../modules/parallax-horizontal";
 import GameObject from "../game-object";
 
-export class GroundObstacle extends GameObject {
+export default class GroundObstacle extends GameObject {
     public readonly name: string = "ground-obstacle";
 
     public zIndex: number = 2;

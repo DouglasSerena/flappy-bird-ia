@@ -1,25 +1,26 @@
-import Emitter from "../game/event-emitter/emitter";
+import { KeyCode } from "../game/shared/constants/key-code";
 import { GameEvents } from "../game/event-emitter/main/game.event";
-import { Game, GameStatus } from "../game/game";
-import { Bird } from "../game/game-objects/bird";
-import { BackgroundLayer } from "../game/game-objects/layers/background.layer";
-import { GroundObstacle } from "../game/game-objects/obstacles/ground.obstacle";
-import { PipesSliderObstacle } from "../game/game-objects/obstacles/pipes-slider.obstacle";
-import { DebugUI } from "../game/game-objects/ui/debug.ui";
+import Game, { GameStatus } from "../game/game";
+import Emitter from "../game/event-emitter/emitter";
+import Bird from "../game/game-objects/bird";
+import BackgroundLayer from "../game/game-objects/layers/background.layer";
+import GroundObstacle from "../game/game-objects/obstacles/ground.obstacle";
+import PipesSliderObstacle from "../game/game-objects/obstacles/pipes-slider.obstacle";
+import DebugUI from "../game/game-objects/ui/debug.ui";
 import GameOverUI from "../game/game-objects/ui/game-over.ui";
 import GetReadyUI from "../game/game-objects/ui/get-ready.ui";
 import ScoreUI from "../game/game-objects/ui/score.ui";
 import TapUI from "../game/game-objects/ui/tap.ui";
-import { Genetic } from "../game/genetic/genetic";
-import { KeyCode } from "../game/shared/constants/key-code";
+import Genetic from "../game/genetic/genetic";
 
-declare var window: any;
 
 async function main() {
     const game = new Game();
-    const genetic = new Genetic(game, 2000);
+    const genetic = new Genetic(game, 500);
 
-    window["game"] = game; // Para debugar no console
+    (window as any)["game"] = game; // Para debugar no console
+    (window as any)["genetic"] = genetic; // Para debugar no console
+
 
     game.runner.start();
     game.renderer.start(document.querySelector("body")!);

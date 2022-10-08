@@ -1,9 +1,9 @@
-import { Bird } from "../bird";
+import Bird from "../bird";
 import GameObject from "../game-object";
-import { GroundObstacle } from "../obstacles/ground.obstacle";
-import { PipesSliderObstacle } from "../obstacles/pipes-slider.obstacle";
+import GroundObstacle from "../obstacles/ground.obstacle";
+import PipesSliderObstacle from "../obstacles/pipes-slider.obstacle";
 
-export class DebugUI extends GameObject {
+export default class DebugUI extends GameObject {
     public readonly name: string = "debug-ui";
 
     public zIndex: number = 1000;

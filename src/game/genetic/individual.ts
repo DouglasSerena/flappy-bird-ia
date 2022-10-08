@@ -1,9 +1,9 @@
 import Layer from "../../neural-network/layer";
 import Network from "../../neural-network/network";
 import { GameStatus } from "../game";
-import { Bird, BirdStatus } from "../game-objects/bird";
+import Bird, { BirdStatus } from "../game-objects/bird";
 
-export class Individual extends Bird {
+export default class Individual extends Bird {
     public network: Network;
 
     public get fitness(): number {

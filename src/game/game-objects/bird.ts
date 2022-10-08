@@ -6,9 +6,9 @@ import CollisionCircle from "../modules/collision/collision-circle";
 import Physics, { Gravity } from "../modules/physics";
 import Vector2 from "../shared/vector2";
 import GameObject from "./game-object";
-import { GroundObstacle } from "./obstacles/ground.obstacle";
-import { PipesSliderObstacle } from "./obstacles/pipes-slider.obstacle";
-import { PipesObstacle } from "./obstacles/pipes.obstacle";
+import GroundObstacle from "./obstacles/ground.obstacle";
+import PipesSliderObstacle from "./obstacles/pipes-slider.obstacle";
+import PipesObstacle from "./obstacles/pipes.obstacle";
 
 export enum BirdStatus {
     Alive,
@@ -18,7 +18,7 @@ export enum BirdStatus {
 export type BirdColor = "blue" | "red" | "yellow" | "orange";
 export const birdColors: BirdColor[] = ["blue", "red", "yellow", "orange"];
 
-export class Bird extends GameObject {
+export default class Bird extends GameObject {
     public name: string = "bird";
 
     public score: number = 0;

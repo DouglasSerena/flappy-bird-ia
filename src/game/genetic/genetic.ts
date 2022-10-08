@@ -1,8 +1,7 @@
-import { Game } from "../game";
-import { Network } from "synaptic";
-import { Individual } from "./individual";
+import Game from "../game";
+import Individual from "./individual";
 
-export class Genetic {
+export default class Genetic {
     public size = 0;
     public generation = 0;
     public population: Individual[] = [];
